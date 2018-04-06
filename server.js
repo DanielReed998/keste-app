@@ -23,6 +23,11 @@ app.use(express.static(path.join(__dirname, 'dist')));
 // Set our api routes
 app.use('/api', api);
 
+// All other routes send back the index.html file
+app.get('*', (req, res, next) => {
+    res.sendfile(path.join(__dirname, "dist/index.html"))
+})
+
 /**
  * Get port from environment and store in Express.
  */

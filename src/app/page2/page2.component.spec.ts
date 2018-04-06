@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Page2Component } from './page2.component';
+import { FormsModule } from '@angular/forms';
 
 describe('Page2Component', () => {
   let component: Page2Component;
@@ -8,7 +9,8 @@ describe('Page2Component', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Page2Component ]
+      declarations: [ Page2Component ],
+      imports: [ FormsModule ]
     })
     .compileComponents();
   }));
@@ -22,4 +24,5 @@ describe('Page2Component', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });

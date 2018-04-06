@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { GenerateGreetingService} from '../generate-greeting.service';
+import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms/src/directives/ng_form';
+import { GenerateGreetingService} from '../generate-greeting.service';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
@@ -17,9 +18,9 @@ export class Page2Component {
 
   onSubmit(nameForm: NgForm) {
     const name = nameForm.value.name;
+    console.log(name);
     this.generateGreetingService.getGreeting(name).subscribe(res => {
       this.greeting = res;
-      console.log(res);
     });
   }
 

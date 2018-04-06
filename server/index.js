@@ -25,7 +25,7 @@ app.use('/api', api);
 
 // All other routes serve the index.html file
 app.get('*', (req, res, next) => {
-  res.send()
+  res.redirect('../dist/index.html');
 }) 
 
 /**

@@ -1,0 +1,11 @@
+<div style="text-align:center">
+    <h1>
+        Angular UI Page 2
+    </h1>
+    <form #nameForm="ngForm" (ngSubmit)="onSubmit(nameForm)">
+        Name:
+        <input id="name" name="name" ngModel />
+        <button type="submit">Submit Name</button>
+    </form>
+    <br /> {{greeting}}
+</div>
